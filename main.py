@@ -10,7 +10,8 @@ def count_words(file_contents):
 
 
 def main():
-    print(get_book_text("/Users/brandon/github/B-Spatial/bookbot/books/frankenstein.txt"))
-    count_words(get_book_text("/Users/brandon/github/B-Spatial/bookbot/books/frankenstein.txt"))
+    file_path = "/Users/brandon/github/B-Spatial/bookbot/books/frankenstein.txt"
+    print(get_book_text(file_path))
+    count_words(get_book_text(file_path))
 
 main()
