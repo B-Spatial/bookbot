@@ -5,5 +5,6 @@ def main():
 
     print(get_book_text(file_path))
     count_words(get_book_text(file_path))
+    print(count_char(get_book_text(file_path)))
 
 main()
