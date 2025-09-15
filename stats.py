@@ -6,7 +6,7 @@ def get_book_text(path_to_file):
 def count_words(file_contents):
     words = file_contents.split()
     num_words = len(words)
-    print(f"{num_words} words found in the document")
+    return num_words
 
 def count_char(file_contents):
     text = file_contents.lower()
@@ -17,3 +17,14 @@ def count_char(file_contents):
         else:
             counts[ch] +=1
     return counts
+
+def sort_on(items):
+    return items["num"]
+
+def sort_dict(counts_dict):
+    counts_list = []
+    for k, v in counts_dict.items():
+        entry = {"char": k, "num": v}
+        counts_list.append(entry)
+    counts_list.sort(reverse=True, key=sort_on)
+    return counts_list
